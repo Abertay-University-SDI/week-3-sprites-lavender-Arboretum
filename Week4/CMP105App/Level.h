@@ -6,6 +6,8 @@
 #include "Framework/GameObject.h"
 #include <string.h>
 #include <iostream>
+#include "Player.h"
+#include "Enemy.h"
 
 
 class Level : BaseLevel {
@@ -17,9 +19,11 @@ public:
 	void update(float dt) override;
 	void render() override;
 
+	Player playerObject;
+	Enemy enemyObject;
 private:
 	// Level objects
 	GameObject testSprite;
 	sf::Texture texture;
-
+	sf::Texture texture2;
 };
